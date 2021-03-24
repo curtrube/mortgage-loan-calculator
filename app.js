@@ -1,6 +1,6 @@
 'use strict';
 
-const btnSubmit = document.getElementById('btn-submit');
+const btnSubmit = document.getElementById('btn-calculate');
 
 btnSubmit.addEventListener('click', function(event) {
   event.preventDefault();
@@ -17,8 +17,8 @@ btnSubmit.addEventListener('click', function(event) {
   mortgageLength = mortgageLength * 12;
 
   console.log(`Loan Amount: ${principal}`);
-  console.log(`Interest Rate: ${interestRate}`);
-  console.log(`Mortgage Length: ${mortgageLength}`);
+  console.log(`Monthly Interest Rate: ${interestRate}`);
+  console.log(`Mortgage Length: ${mortgageLength} months`);
 
   // Calculate monthly mortgage payment
   let monthlyPayment = (principal * interestRate) / (1 - (Math.pow((1 + interestRate), mortgageLength * -1)));
