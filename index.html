@@ -5,25 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mortgage Loan Calculator</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/5517d70628.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <h1>Mortgage Loan Calculator</h1>
-    <form>
-      <div class="form-group">
-        <label for="loan-amount">Loan Amount</label>
-        <input type="number" id="loan-amount" />
-      </div>
-      <div class="form-group">
-        <label for="interest-rate">Interest rate (%)</label>
-        <input type="number" id="interest-rate" />
-      </div>
-      <div class="form-group">
-        <label for="mortgage-length">Mortgage length (years)</label>
-        <input type="number" id="mortgage-length" />
-      </div>
-      <button id="btn-submit">Calculate</button>
-    </form>
+    <div class="container mt-3">
+      <form>
+        <div class="mb-3">
+          <label for="loan-amount" class="form-label">House Price</label>
+          <div class="input-group">
+            <div class="input-group-text">$</div>
+            <input type="number" class="form-control" id="loan-amount" />
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="interest-rate" class="form-label">Interest rate</label>
+          <div class="input-group">
+            <div class="input-group-text">%</div>
+            <input type="number" class="form-control" id="interest-rate" />
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="mortgage-length" class="form-label">Length of loan</label>
+          <div class="input-group">
+            <select id="mortgage-length" class="form-select">
+              <option selected value="30 Years">30 Years</option>
+              <option value="20 Years"> 20 Years</option>
+              <option value="15 Years">15 Years</option>
+              <option value="10 Years">10 Years</option>
+            </select>
+          </div>
+        </div>
+        <button id="btn-calculate" type="submit" class="btn btn-primary">
+          Calculate
+        </button>
+      </form>
+    </div>
     <script src="./app.js"></script>
   </body>
 </html>
